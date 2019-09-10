@@ -9,18 +9,6 @@ val error : string -> _ or_error
 val errorf : ('a, Format.formatter, unit, 'b or_error) format4 -> 'a
 
 
-module ProgressBar : sig
-  type t
-
-  val make : n:int -> t
-
-  val stop : t -> unit
-
-  val incr : t -> unit
-
-  val set_count : t -> int -> unit
-end
-
 (** {2 Cache} *)
 module Cache : sig
   type 'a equal = 'a -> 'a -> bool
