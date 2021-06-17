@@ -80,7 +80,7 @@ module Cache = struct
   type 'a equal = 'a -> 'a -> bool
   type 'a hash = 'a -> int
 
-  let default_eq_ = Pervasives.(=)
+  let default_eq_ = Stdlib.(=)
   let default_hash_ = Hashtbl.hash
 
   (** {2 Value interface} *)
