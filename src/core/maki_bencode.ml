@@ -42,7 +42,7 @@ let as_list = function
 let mk_str s = B.String s
 let mk_list l = B.List l
 let mk_dict l =
-  let l = List.sort (fun (n1,_)(n2,_) -> compare n1 n2) l in
+  let l = List.sort (fun (n1,_)(n2,_) -> Stdlib.compare n1 n2) l in
   B.Dict l
 let mk_pair x y = B.List [x; y]
 let mk_triple x y z = B.List [x;y;z]
